@@ -1,15 +1,36 @@
 .footer {
     display: flex;
     flex-direction: column;
-    background-color: $color-dark-gray;
+    background-color: $color-bg-primary;
+    color: white;
+    
     &__column {
         padding: 1rem 1.5rem;
     }
 
+    &__column-logo {
+        padding: 1rem 1.5rem;
+    }
+
+    &__company-logo {
+        object-fit:contain;
+        width: 100px;
+        border-radius: 10px;
+
+    }
+
+    &__column-logo-text {
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__text-block {
+        padding: 0 1.5rem;
+    }
+
     &__contact-item {
         list-style: none;
-        
-
     }
 
     &__contact-link {
@@ -26,13 +47,13 @@
     &__contact-icon {
         font-size: 1.75rem;
         &--facebook {
-            color: #38529a;
+            color: white;
         }
         &--instagram {
-            color: #f14d59;
+            color: white;
         }
         &--linkedin {
-            color: #0077b6;
+            color: white;
         }
     }
 }

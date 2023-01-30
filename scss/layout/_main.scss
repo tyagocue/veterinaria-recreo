@@ -1,5 +1,14 @@
 .main {
-    margin-top: 50px;
-    padding: 1.5rem 0;
-    background-color: aliceblue;
+    margin-top: $menu-height;
+    //padding: 1.5rem 0;
+    background-color: white;
+    color: white;
+}
+
+.section-cards {
+    background-color: $color-bg-third;
+    &__header {
+        background-color: $color-bg-secondary;
+        padding: 1.5rem;
+    }
 }
