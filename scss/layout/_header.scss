@@ -14,7 +14,6 @@
         border-radius: 35px;
         padding: 15px;
     }
-
     &__menu-label {
         color: $color-text-ligth;
         //margin-left: auto;
@@ -26,7 +25,6 @@
         align-items: center;
         justify-content: center;
     }
-
     &__menu-btn {
         position: absolute;
         right: 0;
@@ -34,19 +32,14 @@
         bottom: 0;
         opacity: 0;
     }
-
     &__menu-btn:checked ~ &__nav-links-container {
             height: calc(100vh - 50px);
     }
-
-    
-
     &__menu-icon {
         height: 2px;
         background-color: $color-text-ligth;
         width: 18px;
         position: relative;
-
         &::after, &::before {
             content: '';
             height: 2px;
@@ -62,24 +55,21 @@
             top: -5px;
         }
     }
-
     &__menu-btn:checked ~ &__menu-label &__menu-icon {
         background: transparent;
         &::after {
             transform: rotate(45deg);
             top: 0;
         }
-
         &::before {
             transform: rotate(-45deg);
             top: 0;
         }
     }
-
     &__nav-links-container {
         list-style: none;
         position: absolute;
-        top: 50px;
+        top: 0px;
         background-color: $color-bg-primary;
         width: 100%;
         height: 0;
@@ -92,16 +82,16 @@
     }
     &__nav-item {
         padding: 1.25rem 1rem;
-        border-bottom: 2px solid rgb(156, 156, 156);
+        &:not(:last-child) {
+            border-bottom: 2px solid rgb(156, 156, 156);
+        }
     }
     &__nav-link {
         color: $color-text-ligth;
     }
-
 }
 
-.user-navbar {
-    
+.user-navbar {    
     margin-left: auto;
     color: white;
     display: flex;
@@ -120,19 +110,50 @@
 
 @media screen and (min-width: 600px) {
     .navbar {
+        height: $menu-height-med;
+        &__logo {
+            height: $menu-height-med;
+        }
         &__menu-label, &__menu-btn {
             display: none;
         }
         &__nav-links-container {
             position: static;
             flex-direction: row;
-            height: 100% !important;
+            height: 100%;
             width: auto;
         }
         &__nav-item {
             padding: 1.25rem 1rem;
             border-bottom: 2px solid rgb(156, 156, 156); 
-            font-size: 25px;   
+            font-size: .8rem;   
+        }
+        
+    }
+    .user-navbar {
+        order: 3;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .navbar {
+        height: $menu-height;
+        &__logo {
+            height: $menu-height;
+        }
+        &__menu-label, &__menu-btn {
+            display: none;
+        }
+        &__nav-links-container {
+            position: static;
+            flex-direction: row;
+            height: 100%;
+            width: auto;
+        }
+        &__nav-item {
+            padding: 1.25rem 1rem;
+            border-bottom: 2px solid rgb(156, 156, 156); 
+            font-size: 1.5rem;   
         }
         
     }
