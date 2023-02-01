@@ -30,3 +30,18 @@ body {
     font-family: 'Aboreto', cursive;
   }
 }
+
+.main-form {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-contact {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-about {
+  font-family: 'Roboto', sans-serif;
+  &__title{
+    font-family: 'Aboreto', cursive;    
+  }
+}

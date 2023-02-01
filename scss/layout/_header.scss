@@ -16,7 +16,6 @@
     }
     &__menu-label {
         color: $color-text-ligth;
-        //margin-left: auto;
         height: 42px;
         background-color: $color-btn-orange;
         width: 42px;
@@ -124,9 +123,9 @@
             width: auto;
         }
         &__nav-item {
-            padding: 1.25rem 1rem;
+            padding: 1.25rem .5rem;
             border-bottom: 2px solid rgb(156, 156, 156); 
-            font-size: .8rem;   
+            font-size: 1rem;   
         }
         
     }
